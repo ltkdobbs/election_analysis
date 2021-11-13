@@ -10,16 +10,15 @@ import csv
 import os
 
 #Assign a variable to load the file from a path.
-openfile = os.path.join("M03 Module Work", "M03-Resources", "election_results.csv")
-#C:\Users\LaraK\Desktop\Git Repositories\M03 Module Work\M03-Resources\election_results.csv
+file_to_load = os.path.join("Resources", "election_results.csv")
 
 #Open the election results and read the file.
-with open(openfile) as election_data:
+with open(file_to_load) as election_data:
 
     #To do: read and analyze the data
-    readfile = csv.reader(election_data)
+    filereader = csv.reader(election_data)
     #Print the header row
-    headers = next(readfile)
+    headers = next(filereader)
     print(headers)
     #Print each row in the CSV file
     # for row in readfile:
